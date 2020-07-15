@@ -1,0 +1,12 @@
+{% extends 'base_layout.html' %}
+
+ {% block content %}
+   <h1> Add New Comment</h1>
+   <div>
+	 <form method = 'POST'>
+     {%csrf_token%}
+		 {{ form.as_p}}
+		 <button type='submit' value='submit'> Submit </button>
+
+	 </form>
+	{% endblock %}

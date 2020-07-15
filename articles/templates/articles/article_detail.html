@@ -1,0 +1,21 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="article-detail">
+    <div class="article">
+			<img src = "{{article.thumb.url}}" />
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.body }}</p>
+        <p>{{ article.date }}</p>
+        <a href="{% url 'articles:add_comment' slug = articles.slug %}">Leave a Comment</a>
+        {% for comment in articles.comments.all %}
+         <p>{{comment.created}}</p>
+         <p>{{comment.user}}</p>
+         <p>{{comment.body}}</p>
+        {% empty %}
+         <p>There is no comments</p>
+        {% endfor %}
+        {% endblock %}
+
+    </div>
+</div>
