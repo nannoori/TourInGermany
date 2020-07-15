@@ -1,0 +1,35 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Majestic Germany</title>
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+    </head>
+    <body>
+        <header class="wrapper">
+            <h1><a href="{% url 'home' %}"><img src="{% static 'logo.png' %}" ></a></h1>
+            <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                    <li>
+                        <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit">Logout</button>
+                        </form>
+                    </li>
+                    <li><br><h1><a href="{% url 'articles:create' %}" class="highlight">PUBLISH AN ARTICLE </h1></a></li>
+                    <p> Note: If you are not a member yet, hit the sign up button </p>
+                    {% else %}
+                    <li><a href="{% url 'accounts:login' %}">LOGIN</a></li>
+                    <li><a href="{% url 'accounts:signup' %}">SIGNUP</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </header>
+        <div class="wrapper">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
