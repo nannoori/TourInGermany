@@ -5,13 +5,11 @@
     <title> About </title>
   </head>
   <style>
-<!--body {
+  body {
         background-image: url("https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547__480.jpg");
 }
--->
-
-</style>
-  <body>
+  </style>
+<body>
 <font color="yellow">
 <h1><strong>Germany</strong>, '<sup><i>the heart of Europe</i></sup>' <b>boasts plenty of attractions.</b></h1>
   <hr><h2 style="background-color:DodgerBlue;"><b>While Oktoberfest brings Munich (Bavaria) to life in fall,</h2>
@@ -19,6 +17,39 @@
    <h3 style="background-color:Red;">Hamburg is all about art and Berlin has the best music,</h3>
    <p style="background-color:Tomato;"> Frankfurt is the upcoming destination.</p>
   <django_content_type_app_label_model_76bd3d3b_uniq style="background-color:green;">Book a tour on the Mosel Wine Route for tasting fine wines or an Elbe or Rhine river cruise for breathtaking scenery</label>
-</font>
+  </font>
+
+<h2 class="w3-center">City Show</h2>
+
+    <div class="w3-content w3-display-container">
+      <img class="mySlides" src="Oktober.jpg" style="width:100%">
+      <img class="mySlides" src="FrankfurtamMain.jpg" style="width:100%">
+      <img class="mySlides" src="Berlin NYE11.jpg" style="width:100%">
+      <img class="mySlides" src="Hamburg-port.jpg" style="width:100%">
+
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+    }
+    </script>
+
 </body>
 </html>
