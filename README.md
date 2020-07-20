@@ -13,7 +13,7 @@ It is dynamic site for searching various prestiges places,Monuments,Hills,Seas a
 *[Application highlights](#highlights)
 
 <a Technologies-Used></a>
-##Technologies Used:
+## Technologies Used:
 *Python
 *Django 
 *Django REST Framework
@@ -25,7 +25,7 @@ It is dynamic site for searching various prestiges places,Monuments,Hills,Seas a
 *Sql and database
 
 <a name="prerequisites"></a>
-##You need to have following:
+## You need to have following:
 *<b>Python 3.7 must be installed and set as virtual/main environment.
 *Python syntax with OOPS concepts and knowledge of Django framework/Flask is a must.</b>
 
