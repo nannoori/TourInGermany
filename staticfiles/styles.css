@@ -1,6 +1,6 @@
 body{
     background-color: #0f121f;
-    background-image: url(/background.jpg);
+     background:url(static/background.jpg) no-repeat center center fixed;
     background-repeat-y: no-repeat;
     color: #fff;
 }
