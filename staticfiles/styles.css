@@ -1,6 +1,6 @@
 body{
     background-color: #0f121f;
-    background:url(/static/background.jpg) no-repeat center center fixed;
+    background-image:url(http://2.bp.blogspot.com/-NUwrKOke78w/TkTZCQhU2lI/AAAAAAAADdQ/DrzaUzflqX4/s1600/Neuschwanstein+germany.jpg) no-repeat center center fixed,image(),url(Berlin NYE.jpg);
     background-size: auto;
     background-repeat: no-repeat;
     color: #fff;
